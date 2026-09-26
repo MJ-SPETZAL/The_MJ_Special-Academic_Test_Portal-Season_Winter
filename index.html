@@ -153,7 +153,7 @@
             <div class="flex items-center gap-2">
                 <button onclick="showAnswersView()" class="juicy-btn px-3.5 py-1.5 rounded-xl text-xs font-bold border border-amber-300 bg-amber-50 text-amber-800 hover:bg-amber-500 hover:text-white transition flex items-center gap-1.5 shadow-sm">
                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
-                    <span>模範解答</span>
+                    <span>模範解答・問題用紙</span>
                 </button>
 
                 <div id="nav-actions" class="hidden">
@@ -178,7 +178,7 @@
                 <div class="pt-2">
                     <button onclick="showAnswersView()" class="juicy-btn px-5 py-2.5 rounded-2xl bg-white text-amber-700 hover:bg-amber-500 hover:text-white border border-amber-300 text-xs font-bold transition inline-flex items-center gap-2 shadow-md">
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
-                        模範解答・解説はこちら
+                        模範解答・問題用紙はこちら
                     </button>
                 </div>
             </div>
@@ -329,7 +329,7 @@
         </section>
 
         <!-- =======================
-             VIEW 3: 模範解答・解説
+             VIEW 3: 模範解答・解説・問題用紙
              ======================= -->
         <section id="answers-view" class="hidden space-y-8">
             <div class="flex items-center justify-between no-print">
@@ -338,23 +338,61 @@
                 </button>
                 <button onclick="window.print()" class="juicy-btn px-4 py-2 text-xs font-bold bg-white hover:bg-slate-100 text-slate-700 rounded-xl border border-slate-300 transition flex items-center gap-2 shadow-sm">
                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"/></svg>
-                    模範解答を印刷 / PDF保存
+                    ページを印刷 / PDF保存
                 </button>
             </div>
 
             <div class="glass-panel p-6 sm:p-10 rounded-[2.5rem] shadow-xl space-y-8 print-clean">
                 <div class="border-b border-slate-200 pb-6 text-center sm:text-left">
-                    <span class="px-3.5 py-1.5 rounded-full text-[11px] font-black tracking-wider uppercase bg-amber-500/15 text-amber-700 border border-amber-500/30 inline-block">Official Answer Key &amp; Explanations</span>
-                    <h2 class="text-3xl sm:text-4xl font-black text-slate-800 mt-2">学力テスト 第1回 模範解答・解説</h2>
-                    <p class="text-xs sm:text-sm text-slate-600 mt-2">各教科の公式模範解答および問題別の解説PDFはこちらから閲覧・ダウンロードできます。</p>
+                    <span class="px-3.5 py-1.5 rounded-full text-[11px] font-black tracking-wider uppercase bg-amber-500/15 text-amber-700 border border-amber-500/30 inline-block">Official Materials &amp; Answer Key</span>
+                    <h2 class="text-3xl sm:text-4xl font-black text-slate-800 mt-2">学力テスト 第1回 問題用紙・模範解答</h2>
+                    <p class="text-xs sm:text-sm text-slate-600 mt-2">問題用紙の原本および、各教科の公式模範解答・解説PDFはこちらから閲覧できます。</p>
                 </div>
 
+                <!-- 問題用紙セクション -->
                 <div class="space-y-3">
                     <h3 class="text-xs font-black uppercase tracking-wider text-slate-500 flex items-center gap-2">
-                        <svg class="w-4 h-4 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
-                        教科別 模範解答PDF
+                        <svg class="w-4 h-4 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                        教科別 問題用紙PDF (原本)
+                    </h3>
+                    <div id="question-pdf-grid" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3"></div>
+                </div>
+
+                <!-- 模範解答セクション -->
+                <div class="space-y-3 pt-4 border-t border-slate-200">
+                    <h3 class="text-xs font-black uppercase tracking-wider text-slate-500 flex items-center gap-2">
+                        <svg class="w-4 h-4 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                        教科別 模範解答・解説PDF
                     </h3>
                     <div id="answer-pdf-grid" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3"></div>
+                </div>
+
+                <!-- 🌟 宿題・特別資料セクション -->
+                <div class="space-y-3 pt-4 border-t border-slate-200">
+                    <h3 class="text-xs font-black uppercase tracking-wider text-slate-500 flex items-center gap-2">
+                        <svg class="w-4 h-4 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+                        宿題・その他の資料
+                    </h3>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                        <div class="glass-card p-3 rounded-2xl border border-white/80 flex items-center justify-between text-center gap-2 hover:border-amber-400 transition juicy-card shadow-sm">
+                            <div class="text-left pl-2">
+                                <span class="text-[10px] font-black uppercase text-amber-700 tracking-wider">宿題</span>
+                                <div class="text-xs font-bold text-slate-800">宿題の日記 原本</div>
+                            </div>
+                            <a href="model_answers/学力テスト_宿題_日記.pdf" target="_blank" class="juicy-btn px-4 py-1.5 bg-amber-500/15 hover:bg-amber-500 hover:text-white text-amber-800 rounded-xl text-xs font-bold border border-amber-500/30 transition shadow-sm">
+                                開く
+                            </a>
+                        </div>
+                        <div class="glass-card p-3 rounded-2xl border border-white/80 flex items-center justify-between text-center gap-2 hover:border-amber-400 transition juicy-card shadow-sm">
+                            <div class="text-left pl-2">
+                                <span class="text-[10px] font-black uppercase text-amber-700 tracking-wider">宿題</span>
+                                <div class="text-xs font-bold text-slate-800">宿題の川柳 原本</div>
+                            </div>
+                            <a href="model_answers/学力テスト_宿題_川柳.pdf" target="_blank" class="juicy-btn px-4 py-1.5 bg-amber-500/15 hover:bg-amber-500 hover:text-white text-amber-800 rounded-xl text-xs font-bold border border-amber-500/30 transition shadow-sm">
+                                開く
+                            </a>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="space-y-4 pt-4 border-t border-slate-200">
@@ -533,6 +571,14 @@
         ];
 
         const MODEL_ANSWERS = {
+            "questions": {
+                "jpn": "model_answers/学力テスト_問題_国語.pdf",
+                "math": "model_answers/学力テスト_問題_数学.pdf",
+                "soc": "model_answers/学力テスト_問題_社会.pdf",
+                "sci": "model_answers/学力テスト_問題_理科.pdf",
+                "eng": "model_answers/学力テスト_問題_英語.pdf",
+                "special": "model_answers/学力テスト_問題_特別.pdf"
+            },
             "pdfs": {
                 "jpn": "model_answers/学力テスト_解答_国語.pdf",
                 "math": "model_answers/学力テスト_解答_数学.pdf",
@@ -709,7 +755,6 @@
 
             let buttonsHtml = '';
 
-            // 🌟 かたすくめさんの場合（2つに分けたファイルを個別ボタンで表示）
             if (student.name === "かたすくめ") {
                 subtitleEl.textContent = "分割された答案ファイルを開く";
                 container.innerHTML = `
@@ -788,8 +833,24 @@
         }
 
         function renderModelAnswerPdfGrid() {
-            const grid = document.getElementById('answer-pdf-grid');
-            grid.innerHTML = ALL_SUBJECTS.map(sub => {
+            const qGrid = document.getElementById('question-pdf-grid');
+            qGrid.innerHTML = ALL_SUBJECTS.map(sub => {
+                const pdfUrl = (MODEL_ANSWERS.questions && MODEL_ANSWERS.questions[sub.key]) ? MODEL_ANSWERS.questions[sub.key] : '#';
+                return `
+                    <div class="glass-card p-3 rounded-2xl border border-white/80 flex flex-col justify-between text-center gap-2 hover:border-amber-400 transition juicy-card shadow-sm">
+                        <div>
+                            <span class="text-[10px] font-black uppercase text-amber-700 tracking-wider">${sub.label}</span>
+                            <div class="text-xs font-bold text-slate-800 mt-0.5">問題用紙</div>
+                        </div>
+                        <a href="${pdfUrl}" target="_blank" class="juicy-btn px-2.5 py-1.5 bg-amber-500/15 hover:bg-amber-500 hover:text-white text-amber-800 rounded-xl text-xs font-bold border border-amber-500/30 transition flex items-center justify-center gap-1 shadow-sm">
+                            開く
+                        </a>
+                    </div>
+                `;
+            }).join('');
+
+            const aGrid = document.getElementById('answer-pdf-grid');
+            aGrid.innerHTML = ALL_SUBJECTS.map(sub => {
                 const pdfUrl = (MODEL_ANSWERS.pdfs && MODEL_ANSWERS.pdfs[sub.key]) ? MODEL_ANSWERS.pdfs[sub.key] : '#';
                 return `
                     <div class="glass-card p-3 rounded-2xl border border-white/80 flex flex-col justify-between text-center gap-2 hover:border-amber-400 transition juicy-card shadow-sm">
